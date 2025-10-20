@@ -19,14 +19,14 @@ variable atomjiggle equal 1.0e-5
 #variable cunits string eV/A^3
 
 # metal units, elastic constants in GPa
-units		metal
-variable cfac equal 1.0e-4
-variable cunits string GPa
+#units		metal
+#variable cfac equal 1.0e-4
+#variable cunits string GPa
 
 # real units, elastic constants in GPa
-#units		real
-#variable cfac equal 1.01325e-4
-#variable cunits string GPa
+units		real
+variable cfac equal 1.01325e-4
+variable cunits string GPa
 
 # Define minimization parameters
 variable etol equal 0.0 
@@ -34,9 +34,6 @@ variable ftol equal 1.0e-10
 variable maxiter equal 100
 variable maxeval equal 1000
 variable dmax equal 1.0e-2
-
-# generate the box and atom positions using a diamond lattice
-variable a equal 5.43
 
 boundary p p p
 atom_style charge

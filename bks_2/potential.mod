@@ -2,15 +2,16 @@
 # See in.elastic for more info.
 
 # Заряды для потенциала Jakse из таблицы I
-set type 1 charge 1.890   # Кремний
-set type 2 charge -0.945 # Кислород
+set type 1 charge 2.4   # Кремний
+set type 2 charge -1.2 # Кислород
 
 pair_style born/coul/long 10.0
-pair_coeff 1 1 0.001198 0.0460 1.4408 25.153 0.0   # Si-Si
-pair_coeff 1 2 0.006990 0.1560 2.5419 46.226 0.0   # Si-O
-pair_coeff 2 2 0.011980 0.2630 3.6430 84.966 0.0   # O-O
+pair_coeff 1 1 0.0276344 0.0460 1.4408 580.030 0.0     # Si-Si из таблицы III
+pair_coeff 1 2 0.16120   0.1560 2.5419 1066.0667 0.0   # Si-O из таблицы III  
+pair_coeff 2 2 0.276344  0.2630 3.6430 1959.372 0.0    # O-O из таблицы III
 
-kspace_style pppm 1.0e-4
+
+#kspace_style pppm 1.0e-4
 
 # Setup neighbor style
 neighbor 1.0 nsq
